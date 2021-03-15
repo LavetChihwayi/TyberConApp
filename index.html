@@ -1,0 +1,3706 @@
+<html>
+	<!--HEAD SECTION------------------------>
+	<head>
+		<link href="home.css" type="text/css" rel="stylesheet"/>
+		<link href="MerdiaStatic/static/base.css" type="text/css" rel="stylesheet">
+		<title>lavet</title>
+	</head>
+	<!--END OF HEAD-->
+	
+	
+	<!--BODY-->
+	<body>
+		<!-- CONTAINER SECTION--------------------->
+		<div class="container">
+			<!--HEADER NAVIGATION-->
+			
+			<header class="top-row-nav center">
+				<div class="">
+					<h1>Tybert@TyberCon</h1>
+					<h1 class="investments">Investments</h1>
+				
+					
+				</div>
+				<div class="">
+					<input class="nav-text-box"type="textbox" placeholder="Search for something here..."/>
+				</div>
+				<div class="items center">
+				<div class="nav-item">   <i class="fa fa-building"></i>Businesses</div>
+				<div class="nav-item">   <i class="fa fa-cog"></i></div>
+				<div class="nav-item">   <i class="fa fa-bell"></i></div>
+				<div class="nav-item">   <i class="fa fa-user"></i></div>
+				</div>
+
+			</header>
+		
+			<!--END OF HEADER NAVIGATION-->
+			
+			
+			<!--Side bar--------------------->
+			<section class="side-bar" >
+				<div class="side-bar-services" onclick="backToSummery()" id="#home">
+					   <i class="fa fa-home"></i><b>Home</b>
+				</div>
+				<div class="side-bar-services" onclick="paymentsHidden()" id="#receipt-payments">
+					   <i class="fa fa-file-archive" ></i><b>Recipts & Payments</b>
+				</div>
+				<div class="side-bar-services" onclick="openDelivaryNotes() "  id="#delivary-notes">
+					   <i class="fa fa-truck"></i><b>Delivery Notes</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openSalesQuates()" id="#sales-quotes">
+					   <i class="fa fa-quote-right"></i><b>Sales Quotes</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openDebitNotes()" id="#debit-notes">
+					   <i class="fa fa-file-invoice"></i><b>Debit Notes</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openSalesOrders()" id="#accounts">
+					   <i class="fa fa-cog"></i><b>Accounts</b>
+				</div>
+				<div class="side-bar-services" onclick="openCustomers()" id="#customers">
+					   <i class="fa fa-users"></i><b>Customers</b>
+				</div>
+				<div class="side-bar-services" onclick="openSuppliers()" id="#suppliers">
+					   <i class="fa fa-cog"></i><b>Suppliers</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="invoiceDropDown()" id="invoices">
+					   <i class="fa fa-envelope"></i><b>Invoices</b>  
+				</div>
+				<div class="invoice-drop-down" id="invoice-drop-down" onmouseleave="invoiceDrop2()"onmouseover="invoiceDrop()">
+					<div>
+					
+					   <section class="drop" onclick="openPurchasesInvoice()" id="#purchases-invoice"><i class="fa fa-envelope"></i>Purchases Invoice</section>  
+					   <section class="drop" onclick="openSalesInvoice()" id="#sales-invoice"><i class="fa fa-envelope"></i>Sales Invoice  </section>
+					</div>
+				</div>
+				
+				
+				
+				<div class="side-bar-services" onclick="openBankAccounts()" id="#bank-accounts">
+					   <i class="fa fa-building"></i><b>Bank Accounts</b>
+				</div>
+				<div class="side-bar-services" onclick="openCreditNotes() " id="#credit-notes">
+					   <i class="fa fa-fire"></i><b>Credit Notes</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openSalesOrders()" id="#sales-orders">
+					   <i class="fa fa-archive" ></i><b>Sales Orders</b>
+				</div>
+				<div class="side-bar-services" onclick="openCashAccounts()" id="#cash-accounts">
+					   <i class="fa fa-archive" ></i><b>Cash Accounts</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openPurchasesOrders()" id="#purchases-orders">
+					   <i class="fa fa-archive" ></i><b>Purchases Orders</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openGoodsReceipts()" id="#goods-receipts">
+					   <i class="fa fa-archive" ></i><b>Goods Receipts</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openInventoryItems()" id="#inventory-items">
+					   <i class="fa fa-archive" ></i><b>Inventory Items</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openInventoryTransfers() "  id="#inventory-transfers">
+					   <i class="fa fa-archive" ></i><b>Inventory Transfers</b>
+				</div>
+				
+				<div class="side-bar-services" onclick="openProductionOrders()" id="#production-orders">
+					   <i class="fa fa-archive" ></i><b>Production Orders</b>
+				</div>
+			</section>
+			<!--End of side bar-->
+			
+			
+			<!--Body below sales tables-->
+			<section class="body-side margin-top" >
+				<!--Body inner hidden-->
+				
+				<!-- End of Body inner hidden-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Recipts & Paymets</h1>
+									<input type="button" value="New Receipt" class="update-button" onclick="openNewReceipt()">
+									<input type="button" value="New Payment" class="update-button" onclick="openNewPayment()">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							
+							<section class="center">
+							
+								<table>
+									<tr class="tr">
+										<th><div class="c-g center"><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="c-yellow center"><i class="fa fa-eye"></i></div></th>
+										<th><div class="c-g">Date</div>                                 </th>
+										<th><div class="c-yellow">#</div>                               </th>
+										<th><div class="c-g">Description</div>                          </th>
+										<th><div class="c-yellow">Payee/Payer</div>                     </th>
+										<th><div class="c-g">Transaction Initiator</div>                </th>
+										<th><div class="c-yellow">Account</div>                         </th>
+										<th><div class="c-g">Amount Received</div>                      </th>
+										<th><div class="c-yellow">Amount Paid</div>                     </th>
+									</tr>
+									<tr class="tr">
+										<td><div class="c-g"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="c-yellow"><input type="button" value="View" class="edit-button" onclick="openView()"></div>  </td>
+										<td><div class="c-g">02/17/2021</div>                                                   </td>
+										<td><div class="c-yellow">701</div>                                                     </td>
+										<td><div class="c-g">Hardware sales</div>                                               </td>
+										<td><div class="c-yellow">Mai Prime</div>                                               </td>
+										<td><div class="c-g">D.Muzungu</div>                                                    </td>
+										<td><div class="c-yellow">001 Ecocash</div>                                             </td>
+										<td><div class="c-g">12000</div>                                                        </td>
+										<td><div class="c-yellow">100</div>                                                     </td>
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="c-g"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="c-yellow"><input type="button" value="View" class="edit-button" onclick="openView()"></div>  </td>
+										<td><div class="c-g">02/17/2021</div>                                                   </td>
+										<td><div class="c-yellow">701</div>                                                     </td>
+										<td><div class="c-g">Hardware sales</div>                                               </td>
+										<td><div class="c-yellow">Mai Prime</div>                                               </td>
+										<td><div class="c-g">D.Muzungu</div>                                                    </td>
+										<td><div class="c-yellow">001 Ecocash</div>                                             </td>
+										<td><div class="c-g">12000</div>                                                        </td>
+										<td><div class="c-yellow">100</div>                                                     </td>
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="c-g"><input type="button" value="Edit" class="edit-button"></div>		</tb>
+										<td><div class="c-yellow"><input type="button" value="View" class="edit-button " onclick="openView()"></div>  </td>
+										<td><div class="c-g">02/17/2021</div>                                                   </td>
+										<td><div class="c-yellow">701</div>                                                     </td>
+										<td><div class="c-g">Hardware sales</div>                                               </td>
+										<td><div class="c-yellow">Mai Prime</div>                                               </td>
+										<td><div class="c-g">D.Muzungu</div>                                                    </td>
+										<td><div class="c-yellow">001 Ecocash</div>                                             </td>
+										<td><div class="c-g">12000</div>                                                        </td>
+										<td><div class="c-yellow">100</div>                                                     </td>
+									</tr> 
+						
+								</table>
+							</section>
+						</div>
+					</section>
+							
+				</div>
+				
+				<!--###################receipt and payment#####################-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-new-receipt">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="previous()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>New Recipt</h1>
+									<!--<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">-->
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							
+							<section class="r center" >
+							
+								<div class="box-box">
+									<div class="date">
+										<label><b>Date</b></label><br>
+										<input type="date" class="txt-box">
+									</div>
+									
+									<div class="date">
+										<label><b>Type:</b></label><br>
+										<select class="txt-box" id="type"onchange="openPaidFromReceivedIn()">
+											<option>Receipt</option>
+											<option>Payment</option>
+										</select>
+									</div>
+									
+									<div class="date reference event">
+										<label><b>Reference:</b></label><br>
+										<input type="textbox" class="txt-box ref not-allowed" id="auto-reference">	
+									</div>
+									<div class="date reference ck">
+										<input type="checkbox" class="txt-box ref2" onclick="openEvent()">
+									</div>
+								</div>
+								
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+										<div>
+											<label class="labels hide" id="received-in"><b>PAID FROM</b></label>
+											<label class="labels absolute" id="paid-from"><b>RECEIVED IN</b></label><br>
+										</div>
+										<div class="down2">
+											<label class=""><b>Account:</b></label><br>
+											<Select type="date" class="txt-box">
+												<option>Suspense</option>
+												<option>BankABC</option>
+												<option>ZB bank</option>
+											</select>
+											<br>
+											<label><b>Payer:</b></label><br>
+										<select class="txt-box">
+											<option>Optional</option>
+											<option>lavet</option>
+										</select>
+										</div>
+									</div>
+								</div>	
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width">
+										
+									</div>
+									
+									
+								</div>
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										<label ><b>Item:</b></label><br>
+										<select class="txt-box">
+											<option>item1</option>
+											<option>item2</option>
+											<option>item3</option>
+											<option>item4</option>
+										</select>
+									</div>
+									
+									<div class="date">
+										<label><b>Account:</b></label><br>
+										<select class="txt-box">
+											<option>Suspense</option>
+											<option>ZB bank</option>
+										</select>
+									</div>
+									
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width2">
+										
+									</div>
+									
+									<div class="date reference ">
+										<label ><b>Qty:</b></label><br>
+										<input type="textbox" class="txt-box ref">	
+									</div>
+									<div class="date reference ">
+										<label ><b>Unity Price:</b></label><br>
+										<input type="textbox" class="txt-box ref">	
+									</div>
+									
+									<div class="date reference ">
+										<label ><b>Amount:</b></label><br>
+										<input type="textbox" class="txt-box ref">USD	
+									</div>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="Create" class="update-button">
+									
+									
+								</div>
+								
+								<!------------------>
+								
+								
+									
+									
+								
+						
+								
+			
+								
+								
+								
+								
+								
+								
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--######################end of receipt and payments##################-->
+				<!--###################new receipt#####################-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-new-payment">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="previous()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>New Payment</h1>
+									<!--<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">-->
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							
+							<section class="center">
+								<div class="box-box">
+									<div class="date">
+										<label><b>Date</b></label><br>
+										<input type="date" class="txt-box">
+									</div>
+									
+									<div class="date">
+										<label><b>Type:</b></label><br>
+										<select class="txt-box" id="type" onchange="openPaidFromReceivedIn()">
+											<option>payment</option>
+											<option>receipt</option>
+										</select>
+									</div>
+									
+									<div class="date reference event">
+										<label><b>Reference:</b></label><br>
+										<input type="textbox" class="txt-box ref not-allowed" id="auto-reference2">	
+									</div>
+									<div class="date reference ck">
+										<input type="checkbox" class="txt-box ref2" onclick="openEvent()">
+									</div>
+								</div>
+								
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+										<div>
+											<label class="labels hide" id="received-in-payment"><b>RECEIVED IN</b></label>
+											<label class="labels absolute" id="paid-from-payment"><b>PAID FROM </b></label><br>
+										</div>
+										<div class="down2">
+											<label class=""><b>Account:</b></label><br>
+											<Select type="date" class="txt-box">
+												<option>Suspense</option>
+												<option>BankABC</option>
+												<option>ZB bank</option>
+											</select>
+											<br>
+											<label><b>Payer:</b></label><br>
+										<select class="txt-box">
+											<option>Optional</option>
+											<option>lavet</option>
+										</select>
+										</div>
+									</div>
+								</div>	
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width">
+										
+									</div>
+									
+									
+								</div>
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										<label ><b>Item:</b></label><br>
+										<select class="txt-box">
+											<option>item1</option>
+											<option>item2</option>
+											<option>item3</option>
+											<option>item4</option>
+										</select>
+									</div>
+									
+									<div class="date">
+										<label><b>Account:</b></label><br>
+										<select class="txt-box">
+											<option>Suspense</option>
+											<option>ZB bank</option>
+										</select>
+									</div>
+									
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width2">
+										
+									</div>
+									
+									<div class="date reference ">
+										<label ><b>Qty:</b></label><br>
+										<input type="textbox" class="txt-box ref">	
+									</div>
+									<div class="date reference ">
+										<label ><b>Unity Price:</b></label><br>
+										<input type="textbox" class="txt-box ref">	
+									</div>
+									
+									<div class="date reference ">
+										<label ><b>Amount:</b></label><br>
+										<input type="textbox" class="txt-box ref">USD	
+									</div>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="Create" class="update-button">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				
+				<!--New D-note------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-new-delivary-note">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="previousDelivaryNote()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>New Delivery Note</h1>
+									<!--<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">-->
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							
+							<section class="center">
+								<div class="box-box">
+									<div class="date">
+										<label><b>Delivery Date:</b></label><br>
+										<input type="date" class="txt-box">
+									</div>
+									
+									<div class="date">
+										<label><b>Customer:</b></label><br>
+										<select class="txt-box" id="type" onchange="openPaidFromReceivedIn()">
+											<option>Gilbert</option>
+											<option>Yeukai</option>
+										</select>
+									</div>
+									
+									<div class="date reference event">
+										<label><b>Reference:</b></label><br>
+										<input type="textbox" class="txt-box ref not-allowed" id="auto-reference2">	
+									</div>
+									<div class="date reference ck">
+										<input type="checkbox" class="txt-box ref2" onclick="openEvent()">
+									</div>
+								</div>
+								
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+										<div>
+											<label class="labels hide" id="received-in-payment"><b>RECEIVED IN</b></label>
+											<label class="labels absolute" id="paid-from-payment"><b>DETAILS </b></label><br>
+										</div>
+										<div class="down2">
+											<label class=""><b>Order Number:</b></label><br>
+											<b>#:</b><input type="textbox" class="txt-box ref">
+											<br>
+											<label><b>Invoice Number:</b></label><br>
+											<b>#:</b><input type="textbox" class="txt-box ref">
+										</div>
+									</div>
+								</div>	
+								<!------------------>
+								<div class="box-box">
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width">
+										
+									</div>
+									
+									
+								</div>
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+								
+										<label><b>Delivery Address:</b></label><br>
+										<textarea type="textbox" class="txt-box ref width textarea"></textarea>
+										
+									</div>
+									
+									
+								</div>
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+								
+										<label><b>Inventory Location:</b></label><br>
+										<input type="textbox" class="txt-box ref width">
+										
+									</div>
+									
+									
+								</div>
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										<label ><b>Item:</b></label><br>
+										<select class="txt-box">
+											<option>item1</option>
+											<option>item2</option>
+											<option>item3</option>
+											<option>item4</option>
+										</select>
+									</div>
+									
+									
+									
+									<div class="date">
+								
+										<label><b>Description:</b></label><br>
+										<input type="textbox" class="txt-box ref width2">
+										
+									</div>
+									
+									<div class="date reference ">
+										<label ><b>Qty:</b></label><br>
+										<input type="textbox" class="txt-box ref">	
+									</div>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="Create" class="update-button">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--End New D-note------------------>
+				
+				<!--**********************************************************-->				<!--**********************************************************-->
+				<!--*************************New Customer*********************************-->
+				
+				<div class="body-side-inner-hidden hide " id="body-side-inner-hidden-new-customer">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Customer</h1>
+								
+								</div>
+								<div>
+								<div class="bac" onclick="previousCustomers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+						
+								
+								<div class="cons-edit>">
+									<div class="consumer-edit">
+										<label class="margin"><b>Name:</b></label><br>
+										<input type="textbox" value="Wadzanai" class="text-box">
+										
+										<label class="margin "><b>Code:</b></label>
+										<input type="textbox" Placeholder="Optional" class="text-box code">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Currency:</b></label><br>
+										<select class="text-box">
+											<option>RTGS</option>	
+											<option>USD</option>	
+											<option>EUR-Euro</option>	
+										</select>
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Business Identifier:</b></label><br>
+										<input type="textbox" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Billing Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here.........." class="text-box txtarea"></textarea>
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Delivery Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here........" class="text-box txtarea"></textarea>
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Email Address:</b></label><br>
+										<input type="textbox" placeholder="address@gmail.com" class="text-box">
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Credit Limit:</b></label><br>
+										<input type="textbox" placeholder="Optional" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Control Account:</b></label><br>
+										<select class="text-box">
+											<option>Accounts receivables</option>	
+											<option>Autoland division</option>	
+											<option>3502-Tybert Investments</option>	
+										</select>
+									</div>
+									
+									
+									
+									<div class="consumer-edit">
+										
+										<input type="button" value="Create" class="update-button">
+										
+										
+									</div>
+								</div>
+							
+								
+								
+							
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new customer####################-->
+				<!--**********************************************************-->
+				
+				<!--**********************************************************-->				
+				<!--**********************************************************-->
+				<!--*************************New Supplier*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-new-supplier">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Supplier</h1>
+								
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+						
+								
+								<div class="cons-edit>">
+									<div class="consumer-edit">
+										<label class="margin"><b>Name:</b></label><br>
+										<input type="textbox" value="Wadzanai" class="text-box">
+										
+										<label class="margin "><b>Code:</b></label>
+										<input type="textbox" Placeholder="Optional" class="text-box code">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Currency:</b></label><br>
+										<select class="text-box">
+											<option>RTGS</option>	
+											<option>USD</option>	
+											<option>EUR-Euro</option>	
+										</select>
+									</div>
+									
+								 
+								
+									<div class="consumer-edit">
+										<label class="margin"><b>Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here.........." class="text-box txtarea"></textarea>
+									</div>
+									
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Email Address:</b></label><br>
+										<input type="textbox" placeholder="address@gmail.com" class="text-box">
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Credit Limit:</b></label><br>
+										<input type="textbox" placeholder="Optional" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Control Account:</b></label><br>
+										<select class="text-box">
+											<option>Accounts receivables</option>	
+											<option>Autoland division</option>	
+											<option>3502-Tybert Investments</option>	
+										</select>
+									</div>
+									
+									
+									
+									<div class="consumer-edit">
+										
+										<input type="button" value="Create" class="update-button">
+										
+										
+									</div>
+								</div>
+							
+								
+								
+							
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new supplier####################-->
+				<!--**********************************************************-->
+				
+				
+				
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-receipt">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Receipt</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previous()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Receipt</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Tanaka</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											<th class="column">Unit Price</th>
+											<th class="column">Total</th>
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											<th class="column">2.50</th>
+											<th class="column">5.00</th>
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											<th class="column">2.00</th>
+											<th class="column">2.00</th>
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-d-note">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Delivery Notes</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousDelivaryNote()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Delivery Note</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Delivery date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--*************************Sales Qutes*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-s-quotes">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Sales Quotes</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSalesQuotes()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Sales Quotes</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Delivery date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--*************************Dedit Notes*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-dbt-notes">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Debit Notes</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousDebitNote()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Debit Notes</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->				<!--**********************************************************-->
+				<!--*************************Customer*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-customer">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Customer</h1>
+									/Wadzanai---Edit
+								</div>
+								<div>
+								<div class="bac" onclick="previousCustomers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+						
+							
+								<div class="cons-edit>">
+									<div class="consumer-edit">
+										<label class="margin"><b>Name:</b></label><br>
+										<input type="textbox" value="Wadzanai" class="text-box">
+										
+										<label class="margin "><b>Code:</b></label>
+										<input type="textbox" value="1023" class="text-box code">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Currency:</b></label><br>
+										<select class="text-box">
+											<option>RTGS</option>	
+											<option>USD</option>	
+											<option>EUR-Euro</option>	
+										</select>
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Business Identifier:</b></label><br>
+										<input type="textbox" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Billing Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here.........." class="text-box txtarea"></textarea>
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Delivery Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here........" class="text-box txtarea"></textarea>
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Email Address:</b></label><br>
+										<input type="textbox" placeholder="address@gmail.com" class="text-box">
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Credit Limit:</b></label><br>
+										<input type="textbox" placeholder="Optional" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Control Account:</b></label><br>
+										<select class="text-box">
+											<option>Accounts receivables</option>	
+											<option>Autoland division</option>	
+											<option>3502-Tybert Investments</option>	
+										</select>
+									</div>
+									
+									<div class="consumer-edit">
+										
+										<input type="checkbox" value="Wadzanai" >
+										<b>Inactive</b>
+									</div>
+									
+									<div class="consumer-edit">
+										
+										<input type="button" value="Update" class="update-button">
+										<input type="button" value="Delete" class="update-button">
+										
+									</div>
+								</div>
+							
+								
+								
+							
+						</div>
+					</section>
+							
+				</div>
+				
+				
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				
+				<!--**********************************************************-->				<!--**********************************************************-->
+				<!--*************************New Customer*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-supplier">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Supplier</h1>
+									/Autoland division-intercompany LoansA/c---Edit
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+						
+							
+								<div class="cons-edit>">
+									<div class="consumer-edit">
+										<label class="margin"><b>Name:</b></label><br>
+										<input type="textbox" value="Autoland division-intercompany LoansA/c" class="text-box">
+										
+										<label class="margin "><b>Code:</b></label>
+										<input type="textbox" value="1003" class="text-box code">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Currency:</b></label><br>
+										<select class="text-box">
+											<option>RTGS</option>	
+											<option>USD</option>	
+											<option>EUR-Euro</option>	
+										</select>
+									</div>
+									
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Address:</b></label><br>
+										<textarea type="textbox" placeholder="Type Here.........." class="text-box txtarea"></textarea>
+									</div>
+									
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Email Address:</b></label><br>
+										<input type="textbox" placeholder="address@gmail.com" class="text-box">
+									</div>
+									
+									<div class="consumer-edit">
+										<label class="margin"><b>Credit Limit:</b></label><br>
+										<input type="textbox" placeholder="Optional" class="text-box">
+									</div>
+									<div class="consumer-edit">
+										<label class="margin"><b>Control Account:</b></label><br>
+										<select class="text-box">
+											<option>Accounts receivables</option>	
+											<option>Autoland division</option>	
+											<option>3502-Tybert Investments</option>	
+										</select>
+									</div>
+									
+									<div class="consumer-edit">
+										
+										<input type="checkbox" value="Wadzanai" >
+										<b>Inactive</b>
+									</div>
+									
+									<div class="consumer-edit">
+										
+										<input type="button" value="Update" class="update-button">
+										<input type="button" value="Delete" class="update-button">
+										
+									</div>
+								</div>
+							
+								
+								
+							
+						</div>
+					</section>
+							
+				</div>
+				
+				<!--#################### end new supplier####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************--><!--**********************************************************-->				<!--**********************************************************-->
+				<!--*************************Supplier*********************************-->
+				
+				
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				
+				<!--**********************************************************--><!--**********************************************************-->				<!--**********************************************************-->
+				<!--*************************Bank Account*********************************-->
+				
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-bank-account">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Bank Account</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Bank Account</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--******************************Cash Account****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-cash-account">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Cash Account</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Cash Account</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				<!--******************************Purchases Order****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-purchases-order">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Purchases Order</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Purchases Order</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				
+				<!--**********************************************************-->
+				<!--******************************Goods Receipt****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-goods-receipt">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Goods Receipt</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Goods Receipt</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				<!--**********************************************************-->
+				<!--******************************Inventory Item****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-inventory-item">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Inventory Item</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Inventory Item</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				<!--**********************************************************-->
+				<!--******************************Inventory Transfer****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-inventory-transfer">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Inventory Transfer</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Inventory Transfer</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+				<!--**********************************************************-->
+				<!--*****************************Production Order****************************-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-production-order">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									
+									<h1>Production Order</h1>
+									<input type="button" value="Edit" class="update-button">
+									<input type="button" value="Clone" class="update-button">
+									<input type="button" value="Print" class="update-button">
+									<input type="button" value="PDF" class="update-button">
+								</div>
+								<div>
+								<div class="bac" onclick="previousSuppliers()"><i class="fa fa-angle-double-left">Back</i></div>
+								</div>
+								
+							</header>
+							
+							<section class="center">
+								<div class="box-box receipt">
+									<header class="receipt-header">
+										<h3>Production Order</h3>
+										
+									</header>
+									<div class="center">
+										<div class="receipt-details"><b>Gosoki Motors</b></div>
+										<div class="receipt-details">
+											<div>
+												<b>Issue date</b><br>
+												12/25/2020
+											</div>
+											<div>
+												<br>
+												<b>Reference</b><br>
+												2805
+											</div>
+											<hr>
+											<div>
+												<h1>TyberCon Building & Hardware Solutions</h1>
+												<i>cnr 1st & Forbs Waterfalls Uplannds(Pamusasa)</i>
+												
+											</div>
+										</div>
+										<div class="receipt-details">
+											<img src="TyberCon Logo0.png" width="450px" height="250px">
+										</div>
+									</div>
+									<header class="receipt-header division">
+										TyberCon Division	
+									</header>
+									<table>
+										<tr>
+											<th class="column">Code</th>
+											<th class="description">Description</th>
+											<th class="column">Qty</th>
+											
+										</tr>
+										<tr>
+											<th class="column">01</th>
+											<th class="description">Motor Oil 500ml</th>
+											<th class="column">2</th>
+											
+										</tr>
+										<tr>
+											<th class="column">02</th>
+											<th class="description">Heavy Duty Battery Terminals</th>
+											<th class="column">1</th>
+											
+										</tr>
+									</table>
+									
+								</div>
+								
+								<!------------------>
+								
+								<!----------------------------------->
+								<div class="box-box">
+									<div class="date">
+										
+									</div>
+									<input type="button" value="New Attachment..." class="update-button width">
+									
+									
+								</div>
+								
+							</section>
+						</div>
+					</section>
+							
+				</div>			
+			
+				<!--#################### end new receipt####################-->
+				<!--**********************************************************-->
+				<!--**********************************************************-->
+				
+
+			
+				
+				
+				
+				
+				
+				<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+				<!--Delivery note-->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-delivary">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head---------->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Delivery</h1>
+									<input type="button" value="New Delivery Note" class="update-button auto" onclick="openNewDelivaryNote()">
+									
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!------End Of Head------->
+							
+							
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble auto"><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div></th>
+										<th><div class="tble auto">Description</div></th>
+										<th><div class="tble auto">Customer</div></th>
+									
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble auto">Pro-forma invoice for 500 cubic of washed coarse riversand including transport</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>                                               </td>
+			                                            
+										                                                   
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble auto">Quotation for rhino plaster board ceilling</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+							
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button " onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div></td>
+										<td><div class="tble auto">701</div></td>
+										<td><div class="tble auto">Hardware sales</div> </td>
+										<td><div class="tble auto">1049 Zimtile(Pvt)Ltd</div> </td>
+							    
+										                                                    
+									</tr> 
+						
+								</table>
+							
+							
+							
+							
+					
+							
+							
+						</div>
+					</section>
+				</div>
+				<!--End of Delivery note-->
+				
+
+				
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-sales-quotes">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head--------->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Sales quotes</h1>
+									<input type="button" value="New Sales Quote" class="update-button auto">
+								
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--Head----------->
+							
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble auto"><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble auto">Customer</div>                          </th>
+										<th><div class="tble auto">Description</div>                     </th>
+										<th><div class="tble ">Amount</div>                     </th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewSalesQuotes()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble auto">Pro-forma invoice for 500 cubic of washed coarse riversand including transport</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>                                               </td>
+										<td><div class="tble auto">USD 230</div></td>                                               </td>
+										                                                   
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewSalesQuotes()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble auto">Quotation for rhino plaster board ceilling</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 3000</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button " onclick="openViewSalesQuotes()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware sales</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div>                                               </td>
+										<td><div class="tble auto">USD 200</div>                                               </td>
+										                                                     </td>
+									</tr> 
+						
+								</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-debit-notes">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head------->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Debit Notes</h1>
+									<input type="button" value="New Debit Note" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of Head-->
+							
+							
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble auto"><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble auto">Issue date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble auto">Supplier</div>                          </th>
+										<th><div class="tble auto">Description</div></th>
+										<th><div class="tble auto">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Royal Lion</div>                                               </td>
+										<td><div class="tble auto">5*5 Liters termite poison returned to the supplier</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware saless</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button " onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware sales</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-purchases-invoices">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head------->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Purchases Invoice</h1>
+									<input type="button" value="New Debit Note" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of Head-->
+							
+							
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble auto"><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble auto">Issue date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble auto">Supplier</div>                          </th>
+										<th><div class="tble auto">Description</div></th>
+										<th><div class="tble auto">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Royal Lion</div>                                               </td>
+										<td><div class="tble auto">5*5 Liters termite poison returned to the supplier</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware saless</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button " onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware sales</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-sales-invoices">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head------->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Sales Invoice</h1>
+									<input type="button" value="New Debit Note" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of Head-->
+							
+							
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble auto"><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble auto">Issue date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble auto">Supplier</div>                          </th>
+										<th><div class="tble auto">Description</div></th>
+										<th><div class="tble auto">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Royal Lion</div>                                               </td>
+										<td><div class="tble auto">5*5 Liters termite poison returned to the supplier</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware saless</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto"><input type="button" value="View" class="edit-button " onclick="openViewDebitNote()"></div>  </td>
+										<td><div class="tble auto">02/17/2021</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware sales</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide " id="body-side-inner-hidden-customers">
+					<section id="payments-hidden">
+					
+						<div class="fit-box">
+							<!-- Head-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>customers</h1>
+									<input type="button" value="New Customer" class="update-button" onclick="openNewCustomer()">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head-->
+							
+							<table class="auto">
+									<tr class="tr">
+										
+										<th><div class="tble "><i class="fa fa-edit"></i></div></th>                                 </th>
+										<th><div class="tble ">Code</div> </th>
+										<th><div class="tble c">Name</div></th>
+										<th><div class="tble c">Email Address</div></th>
+										<th><div class="tble">Invoice</div></th>
+										<th><div class="tble auto">Qty to deliver</div></th>
+										<th><div class="tble auto">Accounts Receivables</div></th>
+										<th><div class="tble auto">Available Credit</div></th>
+										
+									</tr>
+									<tr class="tr auto">
+												
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button" onclick="openViewCustomer()"></div>  </td>
+										<td><div class="tble auto text-align-center">701</div>           </td>
+										<td><div class="tble auto">Wadzanai</div>  </td>
+										<td><div class="tble auto">wadza@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">30</div></td>
+										<td><div class="tble auto text-align-center">30</div></td>
+										<td><div class="tble auto text-align-center">USD 30</div></td>
+										<td><div class="tble auto text-align-center">USD 300</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button" onclick="openViewCustomer()"></div>  </td>
+										<td><div class="tble auto text-align-center">702</div> </td>
+										<td><div class="tble auto">Autoland spares</div> </td>
+										<td><div class="tble auto">autoland@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+									
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button " onclick="openViewCustomer()"></div>  </td>
+										<td><div class="tble auto text-align-center">703</div>  </td>
+										<td><div class="tble auto">Hardware sales</div></td>
+										<td><div class="tble auto">chihwayil95@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">9</div></td>
+										<td><div class="tble auto text-align-center">9</div></td>
+										<td><div class="tble auto text-align-center">USD 900</div></td>
+										<td><div class="tble auto text-align-center">USD 9</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-suppliers">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Suppliers</h1>
+									<input type="button" value="New Receipt" class="update-button" onclick="openNewSupplier()">
+								
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head--->
+							<table class="auto">
+									<tr class="tr">
+										
+										<th><div class="tble "><i class="fa fa-edit"></i></div></th>                                 </th>
+										<th><div class="tble ">Code</div> </th>
+										<th><div class="tble c">Name</div></th>
+										<th><div class="tble c">Email Address</div></th>
+										<th><div class="tble">Invoice</div></th>
+										<th><div class="tble auto">Qty to receive</div></th>
+										<th><div class="tble auto">Accounts payables</div></th>
+										<th><div class="tble auto">Available Credit</div></th>
+										
+									</tr>
+									<tr class="tr auto">
+												
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button" onclick="openViewSupplier()"></div>  </td>
+										<td><div class="tble auto text-align-center">701</div>           </td>
+										<td><div class="tble auto">Autoland division-intercompany Loans A/c</div>  </td>
+										<td><div class="tble auto">wadza@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">30</div></td>
+										<td><div class="tble auto text-align-center">30</div></td>
+										<td><div class="tble auto text-align-center">USD 30</div></td>
+										<td><div class="tble auto text-align-center">USD 300</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button" onclick="openViewSupplier()"></div>  </td>
+										<td><div class="tble auto text-align-center">702</div> </td>
+										<td><div class="tble auto">Autoland spares</div> </td>
+										<td><div class="tble auto">autoland@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										<td><div class="tble auto text-align-center">-</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+									
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button " onclick="openViewSupplier()"></div>  </td>
+										<td><div class="tble auto text-align-center">703</div>  </td>
+										<td><div class="tble auto">Hardware sales</div></td>
+										<td><div class="tble auto">chihwayil95@gmail.com</div></td>
+										<td><div class="tble auto text-align-center">9</div></td>
+										<td><div class="tble auto text-align-center">9</div></td>
+										<td><div class="tble auto text-align-center">USD 900</div></td>
+										<td><div class="tble auto text-align-center">USD 9</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!------------------------------------>
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-credit-notes">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Credit Notes</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End Of Head-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</tb>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				<!-----------------Purchases Invoice------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-sales-orders">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Sales Orders</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</tb>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewDelivaryNote()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				
+				<!--------------Bank Accounts---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-bank-accounts">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Bank Accounts</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr auto">
+										<th><div class="tble auto"><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble auto">Code</div></th>
+										<th><div class="tble auto">Name</div></th>
+										<th><div class="tble auto">Cleared balance</div></th>
+										<th><div class="tble auto">Pending deposits</div></th>
+										<th><div class="tble auto">Pending Withdrawals</div></th>
+										<th><div class="tble auto">Actual Balance</div></th>
+										
+									</tr>
+									<tr class="tr auto">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto">006</div>  </td>
+										<td><div class="tble auto">BankABC</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware sales</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble auto"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble auto">007</div>  </td>
+										<td><div class="tble auto">Ecocash</div>                                                   </td>
+										<td><div class="tble auto">701</div>                                                     </td>
+										<td><div class="tble auto">Hardware saless</div>                                               </td>
+										<td><div class="tble auto">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble">110</div> </td>
+										<td><div class="tble">Stanbic Bank</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Cash Accounts---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-cash-accounts">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Cash Accounts</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewCashAccount()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewCashAccount()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewCashAccount()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Purchases Order---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-purchases-orders">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Purchases Orders</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewPurchasesOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewPurchasesOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewPurchasesOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Goods Receipts---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-goods-receipts">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Goods Receipts</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewGoodsReceipt()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewGoodsReceipt()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewGoodsReceipt()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Inventory Items---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-inventory-items">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Inventory Items</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewInventoryItem()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewInventoryItem()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewInventoryItem()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Inventory Transfers---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-inventory-transfers">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Inventory Transfers</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewInventoryTransfer()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewInventoryTransfer()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewInventoryTransfer()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				<!--------------Production Orders---------------------->
+				<div class="body-side-inner-hidden hide" id="body-side-inner-hidden-production-orders">
+					<section id="payments-hidden">
+						<div class="fit-box">
+							<!--Head section-->
+							<header class="receipts center">
+								<div class="receipts-payments-head center">
+									<div class="back" onclick="backToSummery()"><i class="fa fa-angle-double-left">Back</i></div>
+									<h1>Production Orders</h1>
+									<input type="button" value="New Receipt" class="update-button">
+									<input type="button" value="New Payment" class="update-button">
+								</div>
+								<div class="receipts-payments-head">
+									<input type="text-box" placeholder="Search......." class="text-search">
+									<input type="button" value="Search" class="update-button">
+								</div>
+							</header>
+							<!--End of head section-->
+							<table class="auto">
+									<tr class="tr">
+										<th><div class="tble "><i class="fa fa-edit"></i></div>    </th>
+										<th><div class="tble "><i class="fa fa-eye"></i></div></th>
+										<th><div class="tble ">Date</div>                                 </th>
+										<th><div class="tble ">#</div>                               </th>
+										<th><div class="tble c">Customer</div>                          </th>
+										<th><div class="tble d">Description</div></th>
+										<th><div class="tble">Amount</div></th>
+										
+									</tr>
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewProductionOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 20 000</div></td>
+										                                              
+									</tr>  
+                                    <tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button" onclick="openViewProductionOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble ">Hardware saless</div>                                               </td>
+										<td><div class="tble d">Mai Prime</div></td>
+										<td><div class="tble auto">USD 100</div></td>
+										                                    
+									</tr> 
+									
+									<tr class="tr">
+										<td><div class="tble"><input type="button" value="Edit" class="edit-button"></div>		</td>
+										<td><div class="tble"><input type="button" value="View" class="edit-button " onclick="openViewProductionOrder()"></div>  </td>
+										<td><div class="tble">02/17/2021</div>                                                   </td>
+										<td><div class="tble">701</div>                                                     </td>
+										<td><div class="tble">Hardware sales</div>                                               </td>
+										<td><div class="tble">Mai Prime</div></td>
+										<td><div class="tble auto">USD 200 000</div></td>
+										                                                  
+									</tr> 
+						
+							</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</section>
+				</div>
+				<!------------------------------------>
+				
+				
+				
+				
+				
+				<!--Body Summeries-->
+				
+				<div class="body-side-inner" id="body-side-inner">
+					
+					<!--TABLES OF SALES IN BODY---------------------------->
+					<section class="sales-tables center">
+						<!--Daily sales--->
+						<div class="tables">
+							<h2 class="card-title">Daily Sales</h2>
+							<div class="text-right">	
+								<h2 class="font-light mb-0"><i class="ti-arrow-down text-danger"></i> $12,000</h2>	
+								<span class="text-muted">End Of Year Income</span>	
+							</div>
+							<span class="text-danger c-danger">80%</span>	
+							<div class="progress">	
+								<div class="progress-bar4 bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>	
+							</div>	
+							
+						</div>
+						<!--End Daily sales table-->
+						<!--Weekly sales table-->
+						<div class="tables">
+							<h2 class="">Weekly Sales</h2>
+							<div class="text-right">	
+								<h2 class="font-light mb-0"><i class="ti-arrow-down text-danger"></i> $12,000</h2>	
+								<span class="text-muted">End Of Year Income</span>	
+							</div>
+							<span class="text-good c-good">80%</span>	
+							<div class="progress">	
+								<div class="progress-bar4 bg-good" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>	
+							</div>	
+							
+						</div>
+						<!--End of weekly sales table--->
+						<!--Monthly sales table-->
+						<div class="tables">
+							<h2 class="card-title">Monthly Sales</h2>
+							<div class="text-right">	
+								<h2 class="cash mb-0"><i class="ti-arrow-down text-danger"></i> $12,000</h2>	
+								<span class="text-muted">End Of Year Income</span>	
+							</div>
+							<span class="text-danger c-better">80%</span>	
+							<div class="progress">	
+								<div class="progress-bar4 bg-better" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>	
+							</div>	
+							
+						</div>
+						<!--End of monthly sales table--->
+						<!--Table yearly sales--->
+						<div class="tables">
+							<h2 class="card-title">Yearly Sales</h2>
+							<div class="text-right">	
+								<h2 class="font-light mb-0"><i class="ti-arrow-down text-danger"></i> $12,000</h2>	
+								<span class="text-muted">End Of Year Income</span>	
+							</div>
+							<span class="text-better c-danger">80%</span>	
+							<div class="progress">	
+								<div class="progress-bar4 bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>	
+							</div>	
+							
+						</div>
+						<!--End of yearly sales table-->
+					</section>
+					<!--END OF TABLES SALES-->
+					
+					<!-- ACCOUNTS SUMMERY----------------->
+					<section class="accounts-summery">
+						<header class="accounts-summery-head">
+						<h2>Summery </h2>
+						<div id="edit" class="edit" onclick="editSummary()"><i class="fa fa-edit">Edit</i></div>
+						<div id="edit-hidden" class="edit-hidden" onclick="editSummaryBack()"><i class="fa fa-angle-double-left">Back</i></div>
+						</header>
+						
+						
+						
+						
+						
+						
+						
+						<!--Summary Hidden Edit-->
+						<section id="summary-hidden-edit"class="summary-hidden center">
+							<div class="make-summary-edit">
+								<h1 class="o o-head">Accounting Methods</h1>
+								<select class="options">
+									<option >Accrual Basis</option>
+									<option class="options">Cash Basis</option>
+								</select>
+								<form>
+									<input type="checkbox" id="show-balances" class="o" name="show-balances" value="">
+									<label for="show-balances">Show balances for specified period</label><br>
+									<div class="o">From<input type="date" id="" name="" value="" class="o"> Until <input type="date" id="" name="" value="" class="o"></div>
+									
+									<input type="checkbox" id="show-balances" class="o" name="show-balances" value="">
+									<label for="show-balances">Show Accounts Codes</label><br>
+									<input type="checkbox" id="show-balances" class="o" name="show-balances" value="">
+									<label for="show-balances">Exclude Zero Balances</label><br>
+									<input type="submit" value="Update" class="update-button">
+	
+								</form>
+							</div>
+						</section>
+						<!--End OF Summary Hidden Edit-->
+						
+						
+						
+						
+						
+						
+						<section id="summary" class="">
+						<div class="box">
+							<!--Accouts summary-->
+							<div  class="accounts-summery-accounts B-Sheet center">
+								<div class="acc-sum-head"><b>Balance Sheet</b></div>
+								<div>as at 2/17/2021</div>
+								<div class="acc income">
+									<header class="income-head center">
+										<h2>Assets</h2>
+										<h2>20 00000</h2>
+										
+									</header>
+									
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+								</div>
+								
+								
+								
+								<div class="acc cost-of-sales">
+									<header class="income-head center">
+										<h2>Liabilities</h2>
+										<h2>$30 000</h2>
+										
+									</header>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									
+									
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+								</div>
+								
+								
+								
+								<!--Equity --->
+								<div class="acc operating-expenses">
+									<header class="income-head center">
+										<h2>Equity</h2>
+										<h2>$100 00</h2>
+										
+									</header>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									
+								</div>
+								<!--End of Equity-->
+							</div>
+							<!--End of Balance Sheet-->
+							
+							
+							<!--Trial Balance-->
+							<div class="accounts-summery-accounts P-Loss center">
+								<div class="acc-sum-head"><b>Profit and Loss Statement</b></div>
+								<div>for the period from 2/1/2021 to 2/17/2021</div>
+								
+								<div class="acc income">
+									<header class="income-head center">
+										<h2>Income</h2>
+										<h2>$203,412</h2>
+										
+									</header>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									
+								</div>
+								
+								
+								<div class="acc cost-of-sales">
+									<header class="income-head center">
+										<h2>Less Cost Of Sales</h2>
+										<h2>$203,412</h2>
+										
+									</header>
+									
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+								</div>
+								
+								
+								
+								
+								<div class="acc operating-expenses">
+									<header class="income-head center">
+										<h2>Less Expenses</h2>
+										<h2>$203,412</h2>
+										
+									</header>
+									
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+									<section class="values center">
+										<div>sales</div>
+										<div>$20000</div>
+									</section>
+								</div>
+								
+								
+								
+								<div class="acc net-profit">
+									<header class="income-head center">
+										<h2>Net Profit</h2>
+										<h2>$203,412</h2>
+										
+									</header>
+									
+								</div>
+							</div>
+							<!--End of Trial Balance-->
+						</div>
+						</section>
+					</section>
+					<!--End of Summery-->
+					
+				</div>
+				<!--End Of Summeries-->
+			</section>
+			
+			<!--End of body below sales tables-->
+		</div>
+		<!--End Of Container-->
+	</body>
+	<!--END OF BODY-->
+	<script src="home.js"></script>
+</html>
+

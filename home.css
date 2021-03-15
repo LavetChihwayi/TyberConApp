@@ -1,0 +1,535 @@
+
+/*common elements*/
+.text-box{
+	width:300px;
+	height:40px;
+}
+
+.tr{
+	background:#ccc;
+	width:100%;
+}
+html{
+	margin-left:0px;
+	scroll-behavior:smooth;
+}
+header{
+	padding:5px;
+	
+}
+.container{
+	background:#aaa;
+}
+.top-row-nav{
+	position:fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: #09f;
+	z-index: 8000;
+	border-bottom: 1px solid #06f;
+	box-shadow: 0 1px 10px #05a;
+	color:darkblue;
+}
+.body-side{
+	background:#eee;
+	
+}
+.body-side-inner{
+	margin:90px 5px 5px 150px;
+	background:#aaa;
+	
+
+}
+.business-name-left {
+	background:blue;
+	height:100px;
+	width:300px;
+}
+.center{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+}
+body{
+	height:200px;
+	margin:1;
+	
+}
+
+.margin-top{
+	margin:90px 5px 5px 5px;
+}
+.body{
+	height:2000px;
+}
+.side-bar{
+	float:left;
+	background-color: skyblue;
+	width:150px;
+	font-size:15px;
+	flex-direction:column;
+}
+/*end of commoni*/
+.investments{
+	position:absolute;
+	top:50px;
+	font-size:20px;
+	left:200px;
+}
+.nav-item{
+	margin:10px;
+	color:#fff;
+	padding:5px;
+	font-size:20px;
+	text-align:center;
+}
+.items{
+	width:330px;
+}
+.nav-item:hover,.nav-item:focus{
+	cursor:pointer;
+	background:#89f;
+	font-size:25px;
+	color:darkblue;
+	box-shadow: 0 1px 10px #05a;
+	transition:1s;
+}
+.nav-text-box{
+	height:40px;
+	width:300px;
+	border-radius:1px;
+	font-size:20px;
+	
+}
+.box{
+	background:;
+}
+.side-bar-services{
+	margin-top:30px;
+	height:40px;
+	padding-top:15px;
+
+}
+.invoice-drop-down{
+	position:relative;
+	left:30px;
+	display:none;
+	background:lightblue;
+}
+.show2{
+	cursor:pointer;
+	background:#09f;
+	border-radius:5px;
+	color:skyblue;
+	box-shadow: 0 1px 10px #05a;
+	transition:1s;
+}
+.side-bar-services:hover,.side-bar-services:focus,
+.drop:hover,.drop:focus{
+	cursor:pointer;
+	background:;
+	border-radius:5px;
+	color:darkblue;
+	box-shadow: 0 1px 10px #05a;
+	transition:1s;
+	
+}
+
+	
+.sales-tables{
+	background:#ddd;
+}
+.fa{
+	margin-right:5px;
+	color:darkblue;
+}
+.tables{
+	clear:both;
+	height:200px;
+	width:230px;
+	background:#ddd;
+	margin:5px;
+	text-align:center;
+	box-shadow:15px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius:20px;
+	border:1px solid #eee;
+}
+/*Body inner hidden*/
+.hide{
+	display:none;
+}
+.body-side-inner-hidden{
+	background:#eee;
+}
+.fit-box{
+	background:#aaa;
+	margin:90px 5px 15px 150px;
+}
+.receipts-payments-head{
+	float:left;
+}
+.receipts{
+	position:relative;
+	box-shadow: 0 1px 10px #05a;
+	
+}
+.text-search{
+	height:30px;
+	font-size:20px;
+	margin-right:-20px
+}
+.c-g{
+	width:8	0px;
+	text-align:center;
+}
+.c-yellow{
+	width:100px;
+	text-align:center;
+	
+}
+.back{
+	position:absolute;
+	top:10px;
+}
+
+/*End Of Body inner hidden*/
+.progress{
+	margin:5px;
+	width:220px;
+	height:20px;
+	background:#aaa;
+}
+.progress-bar4{
+	background:green;
+	height:20px; 
+}
+.bg-danger{
+	background:red;
+}
+.c-danger{
+	color:red;
+	font-size:30px;
+}
+.bg-better{
+	background:green;
+}
+.c-better{
+	color:green;
+	font-size:30px;
+}
+.bg-good{
+	background:purple;
+	
+}
+.c-good{
+	color:purple;
+	font-size:30px;
+}
+.text-muted{
+	color:#aaa;
+}
+
+.text-right{
+	text-align:right;
+	position:relative;
+}
+/*accounts-summery*/
+.accounts-summery{
+	background:#ddd;
+	color:#aaa;
+	text-decoration:bold;
+}
+.accounts-summery-head{
+	box-shadow: 0 1px 10px #09a;
+	flex-direction:row;
+}
+.accounts-summery-accounts{
+	width:42vw;
+	margin:1px;
+	
+
+}
+.B-Sheet{
+	float:left;
+	margin:0 10px 0 5px;
+	width:auto;
+	flex-direction:column;
+}
+.P-Loss{
+	flex-direction:column;
+	width:auto;
+}
+.acc-sum-head{
+	font-size:25px;
+}
+.acc{
+	width:500px;
+	margin:5px;
+	background:#eee;
+	border:1px solid #aaa;
+	
+	
+}
+.income-head{
+	background:#eee;
+	box-shadow: 0 1px 10px #07a;
+}
+.values{
+	font-size:20px;
+}
+.fa-edit,.fa-angle-double-left{
+	color:#09f;
+}
+.edit{
+	width:70px;
+	font-size:20px;
+	text-align:center;
+}
+.edit-hidden{
+	width:70px;
+	font-size:20px;
+	text-align:center;
+	display:none;
+}
+.show2{
+	
+}
+.edit:focus,.edit:hover
+.update-button:focus,.update-button:hover,
+.fa-edit:focus,.fa-edit:hover,
+.fa-angle-double-left:focus,.fa-angle-double-left:hover{
+	background:darkblue;
+	color:skyblue;
+	cursor:pointer;
+	border-radius:5px;
+	padding:5px;
+	transition:2s;
+}
+/*accounts-summery*/
+/*Summary Hidden*/
+.show{
+	display:block;
+}
+.summary-hidden{
+	display:none;
+	
+}
+.make-summary-edit{
+	background:#ccc;
+}
+
+.options{
+	width:200px;
+	height:30px;
+}
+.o{
+	margin:40px 0 0 20;
+	color:black;
+}
+.o-head{
+	text-decoration:underline;
+}
+.update-button{
+	width:100px;
+	height:35px;
+	border-radius:10px;
+	color:#09f;
+	border:1px solid skyblue;
+	background:lightblue
+}
+select,input{
+	margin:20px;
+	padding:0;
+	border:1px solid blue;
+	background:#eee;
+}
+
+/*End Of Summary Hidden*/
+/*New payment*/
+.txt-box{
+	margin:0;
+	width:200px;
+	height:30px;
+	font-size:20px;
+	color:black;
+}
+.absolute{
+	position:absolute;
+	top:0;
+}
+.ck-box{
+	margin:0px;
+}
+.ref{
+	width:100px;
+	margin-top:0px;
+	
+	
+}
+
+.events{
+	pointer-events:none;
+}
+.ref2{
+	width:40px;
+}
+.acc{
+	width:300px;
+}
+.date{
+	padding:1px;
+	margin:5px;
+	float:left;
+	position:relative;
+}
+.box-box{
+	margin:1px;
+	
+}
+.down{
+	margin-top:42px;
+}
+.down2{
+	margin-top:19px;
+}
+.width{
+	width:560px;
+}
+.width2{
+	width:260px;
+}
+.r{
+	margin:5px;
+}
+.reference{
+	width:auto;
+	
+}
+.ck{
+	margin:23px 0 0 -10px;
+}
+.labels{
+	margin-left:20px;
+	text-decoration:underline;
+}
+.second{
+	width:500px;
+	background:red;
+}
+.date-type{
+	background:green;
+}
+/*End Of new payment*/
+
+/****Receipt*****/
+.receipt{
+	background:#eee;
+	width:90%;
+	margin:50px;
+}
+.receipt-header{
+	margin:1px;
+	background:#09e;
+	font-size:50px;
+}
+.receipt-details{
+	background:;
+}
+.description{
+	width:500px;
+	background:#bbb;
+	text-align:left;
+}
+.column{
+	width:150px;
+	background:#bbb;
+}
+.division{
+	font-size:30px;
+	padding-left:50px;
+}
+/****End of Receipt*****/
+
+/*Delivary note*/
+.tble{
+	width:75px;
+}
+.textarea{
+	height:100px;
+}
+.auto{
+	width:auto;
+}
+.d{
+	width:500px;
+}
+.c{
+	width:150px;
+}
+.tr2{
+	width:100%;
+}
+/*End Of Delivary note*/
+/*Consumer edit*/
+.cons-edit{
+	flex-direction:column;
+	width:auto;
+	margin:3px;
+}
+.consumer-edit{
+	background:re;
+	width:auto;
+	flex-wrap:wrap;
+	flex-direction:row;
+	margin:5px;
+	
+}
+.code{
+	width:100px;
+}
+.txtarea{
+	font-size:25px;
+	margin-left:20px;
+	width:520px;
+	height:100px;
+}
+.margin{
+	margin-left:30px;
+}
+.float-right{
+	float:right;
+}
+.text-align-center{
+	text-align:center;
+}
+/*End Consumer edit*/
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+	.margin-top{
+		margin:130px 5px 5px 5px;
+	}
+}
+
+
+
+
+@media(max-width:585px){
+	.margin-top{
+		margin:170px 5px 5px 5px;
+	}
+	.nav-text-box{
+		width:90vw;
+	}
+}
